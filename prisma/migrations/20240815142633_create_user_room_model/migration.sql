@@ -49,3 +49,12 @@ CREATE INDEX "Room_userId_idx" ON "Room"("userId");
 
 -- AddForeignKey
 ALTER TABLE "Room" ADD CONSTRAINT "Room_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- CreateTable
+CREATE TABLE "Faq" (
+    "id" SERIAL NOT NULL,
+    "title" TEXT NOT NULL,
+    "desc" TEXT NOT NULL,
+
+    CONSTRAINT "Faq_pkey" PRIMARY KEY ("id")
+);
